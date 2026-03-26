@@ -54,7 +54,7 @@ const RAG_CHUNKS_COLLECTION = 'rag_chunks';
 // Gemini API key.
 // Recommended: set via Firebase Functions env/Secrets.
 // For quick testing you can paste the key here.
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY ?? 'AIzaSyBy231dOVd88_Nz1tX3pvPkoRN4ixKfa9k';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY ?? 'gemini-api-key-here';
 // Embedding model candidates; override with `GEMINI_EMBED_MODEL` (comma-separated).
 // We also try Gemini API `v1` for embeddings because some models don't support `v1beta`.
 const EMBEDDING_MODELS = (process.env.GEMINI_EMBED_MODEL ?? 'gemini-embedding-001,gemini-embedding-2-preview')
