@@ -1,0 +1,1035 @@
+[debug] [2026-03-26T03:50:20.453Z] ----------------------------------------------------------------------
+[debug] [2026-03-26T03:50:20.458Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ANTO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --log-verbosity DEBUG
+[debug] [2026-03-26T03:50:20.459Z] CLI Version:   15.11.0
+[debug] [2026-03-26T03:50:20.459Z] Platform:      win32
+[debug] [2026-03-26T03:50:20.459Z] Node Version:  v22.13.1
+[debug] [2026-03-26T03:50:20.460Z] Time:          Thu Mar 26 2026 06:50:20 GMT+0300 (East Africa Time)
+[debug] [2026-03-26T03:50:20.460Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-26T03:50:23.792Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-26T03:50:23.794Z] > authorizing via signed-in user (gakiotoni@gmail.com)
+[debug] [2026-03-26T03:50:23.959Z] openjdk version "22.0.2" 2024-07-16
+
+[debug] [2026-03-26T03:50:23.960Z] OpenJDK Runtime Environment OpenLogic-OpenJDK (build 22.0.2+9-adhoc.Administrator.jdk22u)
+OpenJDK 64-Bit Server VM OpenLogic-OpenJDK (build 22.0.2+9-adhoc.Administrator.jdk22u, mixed mode, sharing)
+
+[debug] [2026-03-26T03:50:24.014Z] Parsed Java major version: 22
+[info] i  emulators: Starting emulators: functions, firestore, hosting, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, hosting, extensions"}}
+[debug] [2026-03-26T03:50:24.021Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:24.022Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:24.026Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/barch-3891d [none]
+[debug] [2026-03-26T03:50:25.542Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/barch-3891d 200
+[debug] [2026-03-26T03:50:25.542Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/barch-3891d {"projectNumber":"504492061233","projectId":"barch-3891d","lifecycleState":"ACTIVE","name":"const-bot","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-02-17T04:37:26.633380Z"}
+[debug] [2026-03-26T03:50:25.575Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-26T03:50:25.576Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-26T03:50:25.576Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-26T03:50:25.576Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-26T03:50:25.577Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-03-26T03:50:25.588Z] Found emulator hub locator: {"version":"15.11.0","origins":["http://127.0.0.1:4400","http://[::1]:4400"],"pid":8996}
+[debug] [2026-03-26T03:50:25.589Z] Write emulator hub locator at C:\Users\ANTO\AppData\Local\Temp\hub-barch-3891d.json
+[debug] [2026-03-26T03:50:25.605Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2026-03-26T03:50:25.617Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-26T03:50:25.617Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-26T03:50:25.618Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-03-26T03:50:25.618Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, database, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, database, pubsub, storage, dataconnect"}}
+[debug] [2026-03-26T03:50:25.706Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T03:50:25.710Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[debug] [2026-03-26T03:50:25.711Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:25.712Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:25.712Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/barch-3891d/adminSdkConfig [none]
+[debug] [2026-03-26T03:50:26.275Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/barch-3891d/adminSdkConfig 200
+[debug] [2026-03-26T03:50:26.275Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/barch-3891d/adminSdkConfig {"projectId":"barch-3891d","storageBucket":"barch-3891d.firebasestorage.app"}
+[warn] !  firestore: Cloud Firestore Emulator does not support multiple databases yet. {"metadata":{"emulator":{"name":"firestore"},"message":"Cloud Firestore Emulator does not support multiple databases yet."}}
+[warn] !  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
+[warn] !  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2026-03-26T03:50:26.311Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-03-26T03:50:26.312Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2026-03-26T03:50:26.312Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\ANTO\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.20.4.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","barch-3891d","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\ANTO\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.20.4.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"barch-3891d\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to firestore-debug.log"}}
+[debug] [2026-03-26T03:50:29.223Z] Mar 26, 2026 6:50:29 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:50:29 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
+[debug] [2026-03-26T03:50:29.316Z] 
+API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"\nAPI endpoint: http://"}}
+[debug] [2026-03-26T03:50:29.317Z] 127.0.0.1:8080
+Database Edition: STANDARD
+Database Mode: CLOUD_FIRESTORE
+
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nDatabase Edition: STANDARD\nDatabase Mode: CLOUD_FIRESTORE\n\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\r\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\n"}}
+[debug] [2026-03-26T03:50:29.317Z] Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\r\nDev App Server is now running.\n\r\n"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2026-03-26T03:50:29.331Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:29.331Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:29.331Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/barch-3891d/sites 
+[debug] [2026-03-26T03:50:31.506Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/barch-3891d/sites 200
+[debug] [2026-03-26T03:50:31.506Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/barch-3891d/sites {"sites":[{"name":"projects/barch-3891d/sites/barch-3891d","defaultUrl":"https://barch-3891d.web.app","appId":"1:504492061233:web:cfbabb197523a51121db10","type":"DEFAULT_SITE"},{"name":"projects/barch-3891d/sites/barch-3891d-a05b0","defaultUrl":"https://barch-3891d-a05b0.web.app","appId":"1:504492061233:web:fa330aac6204cc8521db10","type":"USER_SITE"}]}
+[debug] [2026-03-26T03:50:31.507Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:31.507Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:31.507Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/barch-3891d/webApps/1:504492061233:web:cfbabb197523a51121db10/config [none]
+[debug] [2026-03-26T03:50:32.496Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/barch-3891d/webApps/1:504492061233:web:cfbabb197523a51121db10/config 200
+[debug] [2026-03-26T03:50:32.496Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/barch-3891d/webApps/1:504492061233:web:cfbabb197523a51121db10/config {"projectId":"barch-3891d","appId":"1:504492061233:web:cfbabb197523a51121db10","storageBucket":"barch-3891d.firebasestorage.app","apiKey":"AIzaSyAWrDZFPDpjbwlI3NpCbuGxeUb9LMDAcQY","authDomain":"barch-3891d.firebaseapp.com","messagingSenderId":"504492061233","measurementId":"G-WMTC13NVQX","projectNumber":"504492061233","version":"2"}
+[debug] [2026-03-26T03:50:32.504Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:32.505Z] Checked if tokens are valid: true, expires at: 1774499666658
+[debug] [2026-03-26T03:50:32.505Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/barch-3891d [none]
+[debug] [2026-03-26T03:50:32.818Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/barch-3891d 200
+[debug] [2026-03-26T03:50:32.818Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/barch-3891d {"projectId":"barch-3891d","projectNumber":"504492061233","displayName":"const-bot","name":"projects/barch-3891d","resources":{"hostingSite":"barch-3891d"},"state":"ACTIVE","etag":"1_9f67f084-4cb0-4971-b973-2a020f4dcd59"}
+[info] i  hosting[barch-3891d]: Serving hosting files from: web/dist/web/browser {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: web/dist/web/browser"}}
+[info] +  hosting[barch-3891d]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: http://127.0.0.1:5000"}}
+[debug] [2026-03-26T03:50:32.867Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "C:\Users\ANTO\OneDrive\Desktop\open\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\" for Cloud Functions..."}}
+[debug] [2026-03-26T03:50:32.872Z] Validating nodejs source
+[debug] [2026-03-26T03:50:35.373Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T03:50:35.374Z] Building nodejs source
+[debug] [2026-03-26T03:50:35.374Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T03:50:35.379Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T03:50:35.403Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8891
+
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+
+[debug] [2026-03-26T03:50:37.180Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T03:50:41.268Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T03:50:41.270Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[info] +  functions[us-central1-ensureRagIndex]: http function initialized (http://127.0.0.1:5001/barch-3891d/us-central1/ensureRagIndex). {"metadata":{"emulator":{"name":"functions"},"message":"http function initialized (http://127.0.0.1:5001/barch-3891d/us-central1/ensureRagIndex)."}}
+[info] +  functions[us-central1-chatWithRag]: http function initialized (http://127.0.0.1:5001/barch-3891d/us-central1/chatWithRag). {"metadata":{"emulator":{"name":"functions"},"message":"http function initialized (http://127.0.0.1:5001/barch-3891d/us-central1/chatWithRag)."}}
+[debug] [2026-03-26T03:50:41.292Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator   │ Host:Port      │ View in Emulator UI              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Functions  │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore  │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting    │ 127.0.0.1:5000 │ n/a                              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2026-03-26T03:50:54.108Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T03:50:54.108Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:50:54.108Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T03:50:54.108Z"],"workRunningCount":1}
+[debug] [2026-03-26T03:50:54.109Z] Accepted request POST /barch-3891d/us-central1/ensureRagIndex --> us-central1-ensureRagIndex
+[debug] [2026-03-26T03:50:54.114Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T03:50:54.115Z] [functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/"}}
+[debug] [2026-03-26T03:50:54.157Z] [worker-pool] addWorker(us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-ensureRagIndex)"}}
+[debug] [2026-03-26T03:50:54.159Z] [worker-pool] Adding worker with key us-central1-ensureRagIndex, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-ensureRagIndex, total=1"}}
+[info] >  (node:17272) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:17272) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  (node:17272) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2026-03-26T03:50:56.571Z] [runtime-status] [17272] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:50:56.575Z] [runtime-status] [17272] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:50:56.576Z] [runtime-status] [17272] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-03-26T03:50:56.577Z] [runtime-status] [17272] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:50:56.578Z] [runtime-status] [17272] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-03-26T03:50:56.579Z] [runtime-status] [17272] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:50:56.742Z] [runtime-status] [17272] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:50:57.531Z] [runtime-status] [17272] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[info] >  [dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2 {"user":"[dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  [dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2"}}
+[debug] [2026-03-26T03:50:57.778Z] [runtime-status] [17272] initializeApp(DEFAULT) {"storageBucket":"barch-3891d.firebasestorage.app","projectId":"barch-3891d"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] initializeApp(DEFAULT) {\"storageBucket\":\"barch-3891d.firebasestorage.app\",\"projectId\":\"barch-3891d\"}"}}
+[debug] [2026-03-26T03:50:57.801Z] [runtime-status] [17272] Functions runtime initialized. {"cwd":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions","node_version":"22.13.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\",\"node_version\":\"22.13.1\"}"}}
+[debug] [2026-03-26T03:50:57.802Z] [runtime-status] [17272] Listening to port: \\?\pipe\fire_emu_955cc7652d31a7c5 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [17272] Listening to port: \\\\?\\pipe\\fire_emu_955cc7652d31a7c5"}}
+[debug] [2026-03-26T03:50:57.823Z] [worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: IDLE"}}
+[debug] [2026-03-26T03:50:57.823Z] [worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex)"}}
+[info] i  functions: Beginning execution of "us-central1-ensureRagIndex" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Beginning execution of \"us-central1-ensureRagIndex\""}}
+[debug] [2026-03-26T03:50:57.825Z] [worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-26T03:50:58.867Z] Mar 26, 2026 6:50:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:50:58 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2026-03-26T03:51:02.114Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-ensureRagIndex" in 4289.7729ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finished \"us-central1-ensureRagIndex\" in 4289.7729ms"}}
+[debug] [2026-03-26T03:51:02.116Z] [worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: IDLE"}}
+[debug] [2026-03-26T03:51:02.116Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T03:51:02.116Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T03:51:02.117Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:52:31.731Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2026-03-26T03:52:32.741Z] Validating nodejs source
+[debug] [2026-03-26T03:52:35.820Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T03:52:35.820Z] Building nodejs source
+[debug] [2026-03-26T03:52:35.821Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T03:52:35.822Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T03:52:35.845Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8502
+
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+
+[debug] [2026-03-26T03:52:37.946Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T03:52:42.014Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T03:52:42.016Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[debug] [2026-03-26T03:52:42.017Z] [worker-pool] Shutting down IDLE worker (us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-ensureRagIndex)"}}
+[debug] [2026-03-26T03:52:42.017Z] [worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: FINISHING"}}
+[debug] [2026-03-26T03:52:42.024Z] Mar 26, 2026 6:52:42 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
+WARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:52:42 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException\r\nWARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.\r\njava.net.SocketException: Connection reset\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)\r\n\tat io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)\r\n\tat io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)\r\n\tat io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)\r\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)\r\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\r\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)\r\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\r\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\n\r\n"}}
+[debug] [2026-03-26T03:52:42.053Z] [worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: exited"}}
+[debug] [2026-03-26T03:52:42.053Z] [worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-8258bc48-7669-4759-9492-3af8543132b7]: FINISHED"}}
+[debug] [2026-03-26T03:52:42.141Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2026-03-26T03:52:43.255Z] Validating nodejs source
+[debug] [2026-03-26T03:52:45.613Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T03:52:45.613Z] Building nodejs source
+[debug] [2026-03-26T03:52:45.614Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T03:52:45.615Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T03:52:45.638Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8018
+
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+
+[debug] [2026-03-26T03:52:47.675Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T03:52:49.083Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T03:52:49.083Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:52:49.083Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T03:52:49.083Z"],"workRunningCount":1}
+[debug] [2026-03-26T03:52:49.083Z] Accepted request POST /barch-3891d/us-central1/ensureRagIndex --> us-central1-ensureRagIndex
+[debug] [2026-03-26T03:52:49.087Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T03:52:49.087Z] [functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/"}}
+[debug] [2026-03-26T03:52:49.087Z] [worker-pool] Cleaned up workers for us-central1-ensureRagIndex: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-ensureRagIndex: 1 --> 0"}}
+[debug] [2026-03-26T03:52:49.108Z] [worker-pool] addWorker(us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-ensureRagIndex)"}}
+[debug] [2026-03-26T03:52:49.109Z] [worker-pool] Adding worker with key us-central1-ensureRagIndex, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-ensureRagIndex, total=1"}}
+[info] >  (node:12260) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:12260) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  (node:12260) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2026-03-26T03:52:51.691Z] [runtime-status] [12260] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:52:51.695Z] [runtime-status] [12260] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:52:51.696Z] [runtime-status] [12260] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-03-26T03:52:51.698Z] [runtime-status] [12260] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:52:51.698Z] [runtime-status] [12260] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-03-26T03:52:51.699Z] [runtime-status] [12260] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:52:51.724Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T03:52:51.726Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[debug] [2026-03-26T03:52:51.860Z] [runtime-status] [12260] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:52:52.659Z] [runtime-status] [12260] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[info] >  [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild {"user":"[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild"}}
+[debug] [2026-03-26T03:52:52.901Z] [runtime-status] [12260] initializeApp(DEFAULT) {"storageBucket":"barch-3891d.firebasestorage.app","projectId":"barch-3891d"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] initializeApp(DEFAULT) {\"storageBucket\":\"barch-3891d.firebasestorage.app\",\"projectId\":\"barch-3891d\"}"}}
+[debug] [2026-03-26T03:52:52.922Z] [runtime-status] [12260] Functions runtime initialized. {"cwd":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions","node_version":"22.13.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\",\"node_version\":\"22.13.1\"}"}}
+[debug] [2026-03-26T03:52:52.923Z] [runtime-status] [12260] Listening to port: \\?\pipe\fire_emu_dde16ab891fa9236 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [12260] Listening to port: \\\\?\\pipe\\fire_emu_dde16ab891fa9236"}}
+[debug] [2026-03-26T03:52:52.967Z] [worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: IDLE"}}
+[debug] [2026-03-26T03:52:52.968Z] [worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex)"}}
+[info] i  functions: Beginning execution of "us-central1-ensureRagIndex" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Beginning execution of \"us-central1-ensureRagIndex\""}}
+[debug] [2026-03-26T03:52:52.968Z] [worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-26T03:52:53.723Z] Mar 26, 2026 6:52:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:52:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2026-03-26T03:52:55.617Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-ensureRagIndex" in 2649.0578ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finished \"us-central1-ensureRagIndex\" in 2649.0578ms"}}
+[debug] [2026-03-26T03:52:55.618Z] [worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: IDLE"}}
+[debug] [2026-03-26T03:52:55.618Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T03:52:55.618Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T03:52:55.618Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:54:01.201Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2026-03-26T03:54:02.212Z] Validating nodejs source
+[debug] [2026-03-26T03:54:04.407Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T03:54:04.407Z] Building nodejs source
+[debug] [2026-03-26T03:54:04.408Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T03:54:04.410Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T03:54:04.444Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8263
+
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+
+[debug] [2026-03-26T03:54:06.874Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T03:54:10.936Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T03:54:10.937Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[debug] [2026-03-26T03:54:10.939Z] [worker-pool] Shutting down IDLE worker (us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-ensureRagIndex)"}}
+[debug] [2026-03-26T03:54:10.939Z] [worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: FINISHING"}}
+[debug] [2026-03-26T03:54:10.945Z] Mar 26, 2026 6:54:10 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
+WARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:54:10 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException\r\nWARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.\r\njava.net.SocketException: Connection reset\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)\r\n\tat io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)\r\n\tat io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)\r\n\tat io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)\r\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)\r\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\r\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)\r\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\r\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\n\r\n"}}
+[debug] [2026-03-26T03:54:10.986Z] [worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: exited"}}
+[debug] [2026-03-26T03:54:10.986Z] [worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-7cd401bb-3d61-4714-babd-9619f992b669]: FINISHED"}}
+[debug] [2026-03-26T03:54:12.671Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2026-03-26T03:54:13.673Z] Validating nodejs source
+[debug] [2026-03-26T03:54:15.640Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T03:54:15.641Z] Building nodejs source
+[debug] [2026-03-26T03:54:15.641Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T03:54:15.644Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T03:54:15.672Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8778
+
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+
+[debug] [2026-03-26T03:54:17.903Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T03:54:21.956Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T03:54:21.958Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[debug] [2026-03-26T03:54:23.150Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T03:54:23.150Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:54:23.151Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T03:54:23.150Z"],"workRunningCount":1}
+[debug] [2026-03-26T03:54:23.151Z] Accepted request POST /barch-3891d/us-central1/ensureRagIndex --> us-central1-ensureRagIndex
+[debug] [2026-03-26T03:54:23.155Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T03:54:23.156Z] [functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/"}}
+[debug] [2026-03-26T03:54:23.156Z] [worker-pool] Cleaned up workers for us-central1-ensureRagIndex: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-ensureRagIndex: 1 --> 0"}}
+[debug] [2026-03-26T03:54:23.182Z] [worker-pool] addWorker(us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-ensureRagIndex)"}}
+[debug] [2026-03-26T03:54:23.183Z] [worker-pool] Adding worker with key us-central1-ensureRagIndex, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-ensureRagIndex, total=1"}}
+[info] >  (node:6180) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:6180) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  (node:6180) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2026-03-26T03:54:26.006Z] [runtime-status] [6180] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:26.012Z] [runtime-status] [6180] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:26.012Z] [runtime-status] [6180] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-03-26T03:54:26.014Z] [runtime-status] [6180] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:26.014Z] [runtime-status] [6180] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-03-26T03:54:26.016Z] [runtime-status] [6180] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:26.201Z] [runtime-status] [6180] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:27.137Z] [runtime-status] [6180] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[info] >  [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild {"user":"[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild"}}
+[debug] [2026-03-26T03:54:27.414Z] [runtime-status] [6180] initializeApp(DEFAULT) {"storageBucket":"barch-3891d.firebasestorage.app","projectId":"barch-3891d"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] initializeApp(DEFAULT) {\"storageBucket\":\"barch-3891d.firebasestorage.app\",\"projectId\":\"barch-3891d\"}"}}
+[debug] [2026-03-26T03:54:27.439Z] [runtime-status] [6180] Functions runtime initialized. {"cwd":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions","node_version":"22.13.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\",\"node_version\":\"22.13.1\"}"}}
+[debug] [2026-03-26T03:54:27.441Z] [runtime-status] [6180] Listening to port: \\?\pipe\fire_emu_50a15fb0984cc503 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [6180] Listening to port: \\\\?\\pipe\\fire_emu_50a15fb0984cc503"}}
+[debug] [2026-03-26T03:54:27.495Z] [worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: IDLE"}}
+[debug] [2026-03-26T03:54:27.495Z] [worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex)"}}
+[info] i  functions: Beginning execution of "us-central1-ensureRagIndex" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Beginning execution of \"us-central1-ensureRagIndex\""}}
+[debug] [2026-03-26T03:54:27.496Z] [worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-26T03:54:28.381Z] Mar 26, 2026 6:54:28 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:54:28 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2026-03-26T03:54:31.092Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-ensureRagIndex" in 3596.761ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finished \"us-central1-ensureRagIndex\" in 3596.761ms"}}
+[debug] [2026-03-26T03:54:31.093Z] [worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: IDLE"}}
+[debug] [2026-03-26T03:54:31.093Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T03:54:31.093Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T03:54:31.094Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:54:31.117Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T03:54:31.117Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:54:31.118Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T03:54:31.117Z"],"workRunningCount":1}
+[debug] [2026-03-26T03:54:31.118Z] Accepted request POST /barch-3891d/us-central1/chatWithRag --> us-central1-chatWithRag
+[debug] [2026-03-26T03:54:31.122Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T03:54:31.122Z] [functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/"}}
+[debug] [2026-03-26T03:54:31.157Z] [worker-pool] addWorker(us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-chatWithRag)"}}
+[debug] [2026-03-26T03:54:31.157Z] [worker-pool] Adding worker with key us-central1-chatWithRag, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-chatWithRag, total=1"}}
+[info] >  (node:6580) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:6580) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  (node:6580) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2026-03-26T03:54:33.872Z] [runtime-status] [6580] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:33.878Z] [runtime-status] [6580] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:33.878Z] [runtime-status] [6580] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-03-26T03:54:33.880Z] [runtime-status] [6580] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:33.881Z] [runtime-status] [6580] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-03-26T03:54:33.882Z] [runtime-status] [6580] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:34.074Z] [runtime-status] [6580] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:54:35.291Z] [runtime-status] [6580] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[info] >  [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true } {"user":"[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }"}}
+[debug] [2026-03-26T03:54:35.645Z] [runtime-status] [6580] initializeApp(DEFAULT) {"storageBucket":"barch-3891d.firebasestorage.app","projectId":"barch-3891d"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] initializeApp(DEFAULT) {\"storageBucket\":\"barch-3891d.firebasestorage.app\",\"projectId\":\"barch-3891d\"}"}}
+[debug] [2026-03-26T03:54:35.681Z] [runtime-status] [6580] Functions runtime initialized. {"cwd":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions","node_version":"22.13.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\",\"node_version\":\"22.13.1\"}"}}
+[debug] [2026-03-26T03:54:35.681Z] [runtime-status] [6580] Listening to port: \\?\pipe\fire_emu_69c843e37403db16 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [6580] Listening to port: \\\\?\\pipe\\fire_emu_69c843e37403db16"}}
+[debug] [2026-03-26T03:54:35.784Z] [worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: IDLE"}}
+[debug] [2026-03-26T03:54:35.784Z] [worker-pool] submitRequest(triggerId=us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-chatWithRag)"}}
+[info] i  functions: Beginning execution of "us-central1-chatWithRag" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Beginning execution of \"us-central1-chatWithRag\""}}
+[debug] [2026-03-26T03:54:35.786Z] [worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-26T03:54:37.014Z] Mar 26, 2026 6:54:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:54:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[info] >  {"severity":"ERROR","message":"Unhandled error GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\n    at handleResponseNotOk (C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\@google\\generative-ai\\dist\\index.js:434:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async makeRequest (C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\@google\\generative-ai\\dist\\index.js:403:9)\n    at async generateContent (C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\@google\\generative-ai\\dist\\index.js:867:22)\n    at async C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\lib\\index.js:296:20\n    at async C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\common\\providers\\https.js:513:14\n    at async runFunction (C:\\Users\\ANTO\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:399:9)\n    at async runHTTPS (C:\\Users\\ANTO\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:424:5)\n    at async C:\\Users\\ANTO\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:585:21 {\n  status: 404,\n  statusText: 'Not Found',\n  errorDetails: undefined\n}"} {"user":{"severity":"ERROR","message":"Unhandled error GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\n    at handleResponseNotOk (C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\@google\\generative-ai\\dist\\index.js:434:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async makeRequest (C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\@google\\generative-ai\\dist\\index.js:403:9)\n    at async generateContent (C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\@google\\generative-ai\\dist\\index.js:867:22)\n    at async C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\lib\\index.js:296:20\n    at async C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\common\\providers\\https.js:513:14\n    at async runFunction (C:\\Users\\ANTO\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:399:9)\n    at async runHTTPS (C:\\Users\\ANTO\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:424:5)\n    at async C:\\Users\\ANTO\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:585:21 {\n  status: 404,\n  statusText: 'Not Found',\n  errorDetails: undefined\n}"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  {\"severity\":\"ERROR\",\"message\":\"Unhandled error GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\\n    at handleResponseNotOk (C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\@google\\\\generative-ai\\\\dist\\\\index.js:434:11)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\\n    at async makeRequest (C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\@google\\\\generative-ai\\\\dist\\\\index.js:403:9)\\n    at async generateContent (C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\@google\\\\generative-ai\\\\dist\\\\index.js:867:22)\\n    at async C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\lib\\\\index.js:296:20\\n    at async C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\common\\\\providers\\\\https.js:513:14\\n    at async runFunction (C:\\\\Users\\\\ANTO\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\firebase-tools\\\\lib\\\\emulator\\\\functionsEmulatorRuntime.js:399:9)\\n    at async runHTTPS (C:\\\\Users\\\\ANTO\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\firebase-tools\\\\lib\\\\emulator\\\\functionsEmulatorRuntime.js:424:5)\\n    at async C:\\\\Users\\\\ANTO\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\firebase-tools\\\\lib\\\\emulator\\\\functionsEmulatorRuntime.js:585:21 {\\n  status: 404,\\n  statusText: 'Not Found',\\n  errorDetails: undefined\\n}\"}"}}
+[debug] [2026-03-26T03:54:38.881Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-chatWithRag" in 3095.8256ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finished \"us-central1-chatWithRag\" in 3095.8256ms"}}
+[debug] [2026-03-26T03:54:38.882Z] [worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: IDLE"}}
+[debug] [2026-03-26T03:54:38.882Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T03:54:38.882Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T03:54:38.882Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:55:23.947Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2026-03-26T03:55:24.964Z] Validating nodejs source
+[debug] [2026-03-26T03:55:27.565Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T03:55:27.565Z] Building nodejs source
+[debug] [2026-03-26T03:55:27.566Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T03:55:27.567Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T03:55:27.590Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8266
+
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+
+[debug] [2026-03-26T03:55:29.384Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T03:55:33.453Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T03:55:33.455Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[debug] [2026-03-26T03:55:33.456Z] [worker-pool] Shutting down IDLE worker (us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-ensureRagIndex)"}}
+[debug] [2026-03-26T03:55:33.457Z] [worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: FINISHING"}}
+[debug] [2026-03-26T03:55:33.457Z] [worker-pool] Shutting down IDLE worker (us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-chatWithRag)"}}
+[debug] [2026-03-26T03:55:33.457Z] [worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: FINISHING"}}
+[debug] [2026-03-26T03:55:33.462Z] Mar 26, 2026 6:55:33 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
+WARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:55:33 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException\r\nWARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.\r\njava.net.SocketException: Connection reset\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)\r\n\tat io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)\r\n\tat io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)\r\n\tat io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)\r\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)\r\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\r\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)\r\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\r\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\n\r\n"}}
+[debug] [2026-03-26T03:55:33.464Z] Mar 26, 2026 6:55:33 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
+WARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:55:33 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException\r\nWARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.\r\njava.net.SocketException: Connection reset\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)\r\n\tat io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)\r\n\tat io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)\r\n\tat io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)\r\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)\r\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\r\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)\r\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\r\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1570)\r\n\r\n"}}
+[debug] [2026-03-26T03:55:33.498Z] [worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: exited"}}
+[debug] [2026-03-26T03:55:33.498Z] [worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-4123dc4a-9bfd-40c5-975a-48f07920be21]: FINISHED"}}
+[debug] [2026-03-26T03:55:33.509Z] [worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: exited"}}
+[debug] [2026-03-26T03:55:33.510Z] [worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-85912704-ae29-4fd4-82d7-2d761ab0d7ba]: FINISHED"}}
+[debug] [2026-03-26T03:55:34.773Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2026-03-26T03:55:35.778Z] Validating nodejs source
+[debug] [2026-03-26T03:55:37.836Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T03:55:37.836Z] Building nodejs source
+[debug] [2026-03-26T03:55:37.836Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T03:55:37.838Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T03:55:37.859Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8362
+
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+
+[debug] [2026-03-26T03:55:39.711Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T03:55:41.860Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T03:55:41.860Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:55:41.861Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T03:55:41.860Z"],"workRunningCount":1}
+[debug] [2026-03-26T03:55:41.861Z] Accepted request POST /barch-3891d/us-central1/ensureRagIndex --> us-central1-ensureRagIndex
+[debug] [2026-03-26T03:55:41.864Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T03:55:41.865Z] [functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/"}}
+[debug] [2026-03-26T03:55:41.865Z] [worker-pool] Cleaned up workers for us-central1-ensureRagIndex: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-ensureRagIndex: 1 --> 0"}}
+[debug] [2026-03-26T03:55:41.865Z] [worker-pool] Cleaned up workers for us-central1-chatWithRag: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-chatWithRag: 1 --> 0"}}
+[debug] [2026-03-26T03:55:41.887Z] [worker-pool] addWorker(us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-ensureRagIndex)"}}
+[debug] [2026-03-26T03:55:41.887Z] [worker-pool] Adding worker with key us-central1-ensureRagIndex, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-ensureRagIndex, total=1"}}
+[debug] [2026-03-26T03:55:43.775Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T03:55:43.777Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[info] >  (node:9288) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:9288) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  (node:9288) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2026-03-26T03:55:44.486Z] [runtime-status] [9288] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:44.494Z] [runtime-status] [9288] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:44.496Z] [runtime-status] [9288] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-03-26T03:55:44.499Z] [runtime-status] [9288] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:44.499Z] [runtime-status] [9288] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-03-26T03:55:44.502Z] [runtime-status] [9288] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:44.748Z] [runtime-status] [9288] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:45.564Z] [runtime-status] [9288] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[info] >  [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] } {"user":"[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }"}}
+[debug] [2026-03-26T03:55:45.817Z] [runtime-status] [9288] initializeApp(DEFAULT) {"storageBucket":"barch-3891d.firebasestorage.app","projectId":"barch-3891d"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] initializeApp(DEFAULT) {\"storageBucket\":\"barch-3891d.firebasestorage.app\",\"projectId\":\"barch-3891d\"}"}}
+[debug] [2026-03-26T03:55:45.837Z] [runtime-status] [9288] Functions runtime initialized. {"cwd":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions","node_version":"22.13.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\",\"node_version\":\"22.13.1\"}"}}
+[debug] [2026-03-26T03:55:45.837Z] [runtime-status] [9288] Listening to port: \\?\pipe\fire_emu_7a4e3cc9579f42e5 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[runtime-status] [9288] Listening to port: \\\\?\\pipe\\fire_emu_7a4e3cc9579f42e5"}}
+[debug] [2026-03-26T03:55:45.952Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: IDLE"}}
+[debug] [2026-03-26T03:55:45.953Z] [worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex)"}}
+[info] i  functions: Beginning execution of "us-central1-ensureRagIndex" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Beginning execution of \"us-central1-ensureRagIndex\""}}
+[debug] [2026-03-26T03:55:45.953Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-26T03:55:46.738Z] Mar 26, 2026 6:55:46 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:55:46 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2026-03-26T03:55:46.796Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-ensureRagIndex" in 842.8756ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finished \"us-central1-ensureRagIndex\" in 842.8756ms"}}
+[debug] [2026-03-26T03:55:46.797Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: IDLE"}}
+[debug] [2026-03-26T03:55:46.797Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T03:55:46.797Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T03:55:46.797Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:55:46.819Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T03:55:46.819Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T03:55:46.820Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T03:55:46.819Z"],"workRunningCount":1}
+[debug] [2026-03-26T03:55:46.820Z] Accepted request POST /barch-3891d/us-central1/chatWithRag --> us-central1-chatWithRag
+[debug] [2026-03-26T03:55:46.821Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T03:55:46.821Z] [functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/"}}
+[debug] [2026-03-26T03:55:46.841Z] [worker-pool] addWorker(us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-chatWithRag)"}}
+[debug] [2026-03-26T03:55:46.842Z] [worker-pool] Adding worker with key us-central1-chatWithRag, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-chatWithRag, total=1"}}
+[info] >  (node:11060) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:11060) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  (node:11060) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2026-03-26T03:55:49.250Z] [runtime-status] [11060] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:49.257Z] [runtime-status] [11060] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:49.258Z] [runtime-status] [11060] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-03-26T03:55:49.260Z] [runtime-status] [11060] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:49.261Z] [runtime-status] [11060] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-03-26T03:55:49.263Z] [runtime-status] [11060] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:49.512Z] [runtime-status] [11060] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.2","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.2\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-03-26T03:55:50.368Z] [runtime-status] [11060] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.7.0","resolution":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.7.0\",\"resolution\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[info] >  [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand` {"user":"[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`"}}
+[debug] [2026-03-26T03:55:50.616Z] [runtime-status] [11060] initializeApp(DEFAULT) {"storageBucket":"barch-3891d.firebasestorage.app","projectId":"barch-3891d"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] initializeApp(DEFAULT) {\"storageBucket\":\"barch-3891d.firebasestorage.app\",\"projectId\":\"barch-3891d\"}"}}
+[debug] [2026-03-26T03:55:50.634Z] [runtime-status] [11060] Functions runtime initialized. {"cwd":"C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions","node_version":"22.13.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ANTO\\\\OneDrive\\\\Desktop\\\\open\\\\functions\",\"node_version\":\"22.13.1\"}"}}
+[debug] [2026-03-26T03:55:50.635Z] [runtime-status] [11060] Listening to port: \\?\pipe\fire_emu_eea9a5e4c848e7f4 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[runtime-status] [11060] Listening to port: \\\\?\\pipe\\fire_emu_eea9a5e4c848e7f4"}}
+[debug] [2026-03-26T03:55:50.666Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE"}}
+[debug] [2026-03-26T03:55:50.666Z] [worker-pool] submitRequest(triggerId=us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-chatWithRag)"}}
+[info] i  functions: Beginning execution of "us-central1-chatWithRag" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Beginning execution of \"us-central1-chatWithRag\""}}
+[debug] [2026-03-26T03:55:50.667Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-26T03:55:51.435Z] Mar 26, 2026 6:55:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Mar 26, 2026 6:55:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2026-03-26T03:55:54.603Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-chatWithRag" in 3936.3419ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finished \"us-central1-chatWithRag\" in 3936.3419ms"}}
+[debug] [2026-03-26T03:55:54.604Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE"}}
+[debug] [2026-03-26T03:55:54.604Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T03:55:54.604Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T03:55:54.604Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] i  hosting: 127.0.0.1 - - [26/Mar/2026:04:03:20 +0000] "GET / HTTP/1.1" 200 489 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Mar/2026:04:03:20 +0000] \"GET / HTTP/1.1\" 200 489 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Mar/2026:04:03:20 +0000] "GET /styles-5INURTSO.css HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Mar/2026:04:03:20 +0000] \"GET /styles-5INURTSO.css HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Mar/2026:04:03:20 +0000] "GET /polyfills-FFHMD2TL.js HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Mar/2026:04:03:20 +0000] \"GET /polyfills-FFHMD2TL.js HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Mar/2026:04:03:20 +0000] "GET /main-H4ZNF4RJ.js HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Mar/2026:04:03:20 +0000] \"GET /main-H4ZNF4RJ.js HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Mar/2026:04:03:21 +0000] "GET /favicon.ico HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Mar/2026:04:03:21 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Mar/2026:04:05:13 +0000] "GET /chat HTTP/1.1" 200 489 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Mar/2026:04:05:13 +0000] \"GET /chat HTTP/1.1\" 200 489 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Mar/2026:04:05:14 +0000] "GET /main-QFJQSO77.js HTTP/1.1" 200 - "http://127.0.0.1:5000/chat" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Mar/2026:04:05:14 +0000] \"GET /main-QFJQSO77.js HTTP/1.1\" 200 - \"http://127.0.0.1:5000/chat\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36\""}}
+[debug] [2026-03-26T04:05:14.550Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T04:05:14.550Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:05:14.551Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T04:05:14.550Z"],"workRunningCount":1}
+[debug] [2026-03-26T04:05:14.551Z] Accepted request OPTIONS /barch-3891d/us-central1/ensureRagIndex --> us-central1-ensureRagIndex
+[debug] [2026-03-26T04:05:14.555Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T04:05:14.556Z] [functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/"}}
+[debug] [2026-03-26T04:05:14.556Z] [worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex)"}}
+[info] i  functions: Beginning execution of "us-central1-ensureRagIndex" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Beginning execution of \"us-central1-ensureRagIndex\""}}
+[debug] [2026-03-26T04:05:14.556Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: BUSY"}}
+[debug] [2026-03-26T04:05:14.562Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-ensureRagIndex" in 5.8634ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finished \"us-central1-ensureRagIndex\" in 5.8634ms"}}
+[debug] [2026-03-26T04:05:14.563Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: IDLE"}}
+[debug] [2026-03-26T04:05:14.563Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T04:05:14.563Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T04:05:14.564Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:05:14.565Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T04:05:14.565Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:05:14.565Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/ensureRagIndex-2026-03-26T04:05:14.565Z"],"workRunningCount":1}
+[debug] [2026-03-26T04:05:14.565Z] Accepted request POST /barch-3891d/us-central1/ensureRagIndex --> us-central1-ensureRagIndex
+[debug] [2026-03-26T04:05:14.569Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T04:05:14.569Z] [functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/ensureRagIndex, mapping to path=/"}}
+[debug] [2026-03-26T04:05:14.569Z] [worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ensureRagIndex)"}}
+[info] i  functions: Beginning execution of "us-central1-ensureRagIndex" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Beginning execution of \"us-central1-ensureRagIndex\""}}
+[debug] [2026-03-26T04:05:14.570Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":">  {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-26T04:05:14.605Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-ensureRagIndex" in 36.0302ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finished \"us-central1-ensureRagIndex\" in 36.0302ms"}}
+[debug] [2026-03-26T04:05:14.606Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: IDLE"}}
+[debug] [2026-03-26T04:05:14.607Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T04:05:14.607Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T04:05:14.607Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:05:36.590Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T04:05:36.589Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:05:36.590Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T04:05:36.589Z"],"workRunningCount":1}
+[debug] [2026-03-26T04:05:36.590Z] Accepted request OPTIONS /barch-3891d/us-central1/chatWithRag --> us-central1-chatWithRag
+[debug] [2026-03-26T04:05:36.594Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T04:05:36.594Z] [functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/"}}
+[debug] [2026-03-26T04:05:36.594Z] [worker-pool] submitRequest(triggerId=us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-chatWithRag)"}}
+[info] i  functions: Beginning execution of "us-central1-chatWithRag" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Beginning execution of \"us-central1-chatWithRag\""}}
+[debug] [2026-03-26T04:05:36.595Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY"}}
+[debug] [2026-03-26T04:05:36.603Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-chatWithRag" in 8.2926ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finished \"us-central1-chatWithRag\" in 8.2926ms"}}
+[debug] [2026-03-26T04:05:36.604Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE"}}
+[debug] [2026-03-26T04:05:36.605Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T04:05:36.605Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T04:05:36.606Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:05:36.608Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T04:05:36.608Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:05:36.608Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T04:05:36.608Z"],"workRunningCount":1}
+[debug] [2026-03-26T04:05:36.608Z] Accepted request POST /barch-3891d/us-central1/chatWithRag --> us-central1-chatWithRag
+[debug] [2026-03-26T04:05:36.614Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T04:05:36.615Z] [functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/"}}
+[debug] [2026-03-26T04:05:36.615Z] [worker-pool] submitRequest(triggerId=us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-chatWithRag)"}}
+[info] i  functions: Beginning execution of "us-central1-chatWithRag" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Beginning execution of \"us-central1-chatWithRag\""}}
+[debug] [2026-03-26T04:05:36.616Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-26T04:05:39.319Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-chatWithRag" in 2703.3211ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finished \"us-central1-chatWithRag\" in 2703.3211ms"}}
+[debug] [2026-03-26T04:05:39.320Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE"}}
+[debug] [2026-03-26T04:05:39.320Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T04:05:39.320Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T04:05:39.321Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:06:39.206Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T04:06:39.206Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:06:39.206Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T04:06:39.206Z"],"workRunningCount":1}
+[debug] [2026-03-26T04:06:39.206Z] Accepted request OPTIONS /barch-3891d/us-central1/chatWithRag --> us-central1-chatWithRag
+[debug] [2026-03-26T04:06:39.213Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T04:06:39.213Z] [functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/"}}
+[debug] [2026-03-26T04:06:39.214Z] [worker-pool] submitRequest(triggerId=us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-chatWithRag)"}}
+[info] i  functions: Beginning execution of "us-central1-chatWithRag" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Beginning execution of \"us-central1-chatWithRag\""}}
+[debug] [2026-03-26T04:06:39.215Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY"}}
+[debug] [2026-03-26T04:06:39.221Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-chatWithRag" in 6.6442ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finished \"us-central1-chatWithRag\" in 6.6442ms"}}
+[debug] [2026-03-26T04:06:39.222Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE"}}
+[debug] [2026-03-26T04:06:39.222Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T04:06:39.223Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T04:06:39.223Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:06:39.225Z] [work-queue] {"queuedWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T04:06:39.225Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:06:39.225Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/barch-3891d/us-central1/chatWithRag-2026-03-26T04:06:39.225Z"],"workRunningCount":1}
+[debug] [2026-03-26T04:06:39.225Z] Accepted request POST /barch-3891d/us-central1/chatWithRag --> us-central1-chatWithRag
+[debug] [2026-03-26T04:06:39.230Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-03-26T04:06:39.230Z] [functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/barch-3891d/us-central1/chatWithRag, mapping to path=/"}}
+[debug] [2026-03-26T04:06:39.230Z] [worker-pool] submitRequest(triggerId=us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-chatWithRag)"}}
+[info] i  functions: Beginning execution of "us-central1-chatWithRag" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Beginning execution of \"us-central1-chatWithRag\""}}
+[debug] [2026-03-26T04:06:39.231Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":">  {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"MISSING\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2026-03-26T04:06:42.885Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-chatWithRag" in 3654.2925ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finished \"us-central1-chatWithRag\" in 3654.2925ms"}}
+[debug] [2026-03-26T04:06:42.886Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: IDLE"}}
+[debug] [2026-03-26T04:06:42.886Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-03-26T04:06:42.886Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-03-26T04:06:42.886Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-03-26T04:43:08.036Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2026-03-26T04:43:09.043Z] Validating nodejs source
+[debug] [2026-03-26T04:43:13.111Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T04:43:13.112Z] Building nodejs source
+[debug] [2026-03-26T04:43:13.112Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T04:43:13.114Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T04:43:13.154Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[debug] [2026-03-26T04:43:13.189Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\src\\index.ts changed, reloading triggers"}}
+[info] Serving at port 8000
+
+[debug] [2026-03-26T04:43:14.192Z] Validating nodejs source
+[debug] [2026-03-26T04:43:16.592Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T04:43:16.593Z] Building nodejs source
+[debug] [2026-03-26T04:43:16.593Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+
+[debug] [2026-03-26T04:43:16.596Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T04:43:16.601Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T04:43:16.623Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8382
+
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+
+[debug] [2026-03-26T04:43:18.596Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T04:43:20.709Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T04:43:20.711Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[debug] [2026-03-26T04:43:20.713Z] [worker-pool] Shutting down IDLE worker (us-central1-ensureRagIndex) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-ensureRagIndex)"}}
+[debug] [2026-03-26T04:43:20.713Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: FINISHING"}}
+[debug] [2026-03-26T04:43:20.713Z] [worker-pool] Shutting down IDLE worker (us-central1-chatWithRag) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-chatWithRag)"}}
+[debug] [2026-03-26T04:43:20.714Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: FINISHING"}}
+[debug] [2026-03-26T04:43:20.736Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: exited"}}
+[debug] [2026-03-26T04:43:20.736Z] [worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ensureRagIndex"},"extension":{},"message":"[worker-us-central1-ensureRagIndex-6dbdbb3c-4333-41fb-9f3b-0ebb16e32d5a]: FINISHED"}}
+[debug] [2026-03-26T04:43:20.737Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: exited"}}
+[debug] [2026-03-26T04:43:20.737Z] [worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-chatWithRag"},"extension":{},"message":"[worker-us-central1-chatWithRag-33e56d6d-33f7-463a-8eff-6ee4d7ae334c]: FINISHED"}}
+[debug] [2026-03-26T04:43:22.653Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T04:43:22.654Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[debug] [2026-03-26T04:43:39.159Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2026-03-26T04:43:40.162Z] Validating nodejs source
+[debug] [2026-03-26T04:43:42.685Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T04:43:42.685Z] Building nodejs source
+[debug] [2026-03-26T04:43:42.685Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T04:43:42.687Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T04:43:42.717Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8362
+
+[debug] [2026-03-26T04:43:44.246Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\src\\index.ts changed, reloading triggers"}}
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+
+[debug] [2026-03-26T04:43:45.255Z] Validating nodejs source
+[debug] [2026-03-26T04:43:47.195Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T04:43:47.195Z] Building nodejs source
+[debug] [2026-03-26T04:43:47.196Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T04:43:47.197Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T04:43:47.221Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[debug] [2026-03-26T04:43:47.247Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T04:43:47.257Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2026-03-26T04:43:48.013Z] File C:\Users\ANTO\OneDrive\Desktop\open\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ANTO\\OneDrive\\Desktop\\open\\functions\\src\\index.ts changed, reloading triggers"}}
+[info] Serving at port 8162
+
+[debug] [2026-03-26T04:43:49.024Z] Validating nodejs source
+[debug] [2026-03-26T04:43:51.451Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "firebase-admin": "^13.7.0",
+    "firebase-functions": "^7.2.2",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
+[debug] [2026-03-26T04:43:51.451Z] Building nodejs source
+[debug] [2026-03-26T04:43:51.451Z] Failed to find version of module node: reached end of search path C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-03-26T04:43:51.452Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-26T04:43:51.479Z] Found firebase-functions binary at 'C:\Users\ANTO\OneDrive\Desktop\open\functions\node_modules\.bin\firebase-functions'
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+
+[debug] [2026-03-26T04:43:51.511Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T04:43:51.520Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T04:43:51.527Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[info] Serving at port 8962
+
+[info] [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+
+[debug] [2026-03-26T04:43:53.540Z] Got response from /__/functions.yaml {"endpoints":{"ensureRagIndex":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"ensureRagIndex"},"chatWithRag":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"chatWithRag"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-03-26T04:43:55.562Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T04:43:55.564Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
+[debug] [2026-03-26T04:43:57.594Z] defaultcredentials: writing to file C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json
+[debug] [2026-03-26T04:43:57.595Z] Setting GAC to C:\Users\ANTO\AppData\Roaming\firebase\gakiotoni_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ANTO\\AppData\\Roaming\\firebase\\gakiotoni_gmail_com_application_default_credentials.json"}}
+[info] +  functions: Loaded functions definitions from source: ensureRagIndex, chatWithRag. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ensureRagIndex, chatWithRag."}}
