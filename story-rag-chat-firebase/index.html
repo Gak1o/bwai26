@@ -1,0 +1,336 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Story Angular RAG Chat on Firebase</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="story-rag-chat-firebase"
+                  title="Story Angular RAG Chat on Firebase"
+                  environment="web"
+                  feedback-link="https://github.com/gak1o/bwai26/issues">
+    
+      <google-codelab-step label="Introduction" duration="1">
+        <p>Welcome! By the end of this lab, you will have a deployed <strong>Angular RAG Chatbot</strong> that acts as an expert on your provided PDF document.</p>
+<h2 is-upgraded>What you will learn:</h2>
+<ul>
+<li>Cloning a repository in Cloud Shell.</li>
+<li>Configuring a Firebase project for Web and Functions.</li>
+<li>Securely storing a Gemini API key using Google Cloud Secret Manager.</li>
+<li>Deploying a full-stack AI app.</li>
+</ul>
+<h2 is-upgraded>Prerequisites:</h2>
+<ul>
+<li>A Google Cloud Planning project with <strong>Billing</strong> and <strong>Firebase</strong> enabled.</li>
+<li>A <strong>Gemini API Key</strong> from <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 1: Open Cloud Shell &amp; Clone" duration="3">
+        <ol type="1">
+<li>Go to <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a>.</li>
+<li>Click the <strong>Activate Cloud Shell</strong> button (top right).</li>
+<li>Clone the repo and enter the project folder:</li>
+</ol>
+<pre><code language="language-bash" class="language-bash">git clone https://github.com/gak1o/bwai26.git
+cd bwai26
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 2: Login &amp; Select Project" duration="3">
+        <ol type="1">
+<li>Authenticate with Firebase:</li>
+</ol>
+<pre><code language="language-bash" class="language-bash">firebase login --no-localhost
+</code></pre>
+<ol type="1" start="2">
+<li>Link your Firebase project:</li>
+</ol>
+<pre><code language="language-bash" class="language-bash">firebase use --add
+</code></pre>
+<p>Select the project you created for this codelab.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 3: Add Your PDF" duration="2">
+        <p>The AI needs a source. Rename your choice of story PDF to <strong><code>story.pdf</code></strong> and place it here:</p>
+<p><code>functions/assets/story.pdf</code></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 4: Configure Frontend" duration="5">
+        <p>Open <code>web/src/app/firebaseConfig.ts</code> and paste your project config:</p>
+<pre><code language="language-typescript" class="language-typescript">export const firebaseConfig = {
+  apiKey: &#34;YOUR_API_KEY&#34;,
+  authDomain: &#34;YOUR_PROJECT.firebaseapp.com&#34;,
+  projectId: &#34;YOUR_PROJECT_ID&#34;,
+  appId: &#34;YOUR_APP_ID&#34;
+};
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 4.5: Implement the Landing Page" duration="5">
+        <p>Open <code>web/src/app/landing/landing.component.ts</code>. Replace its contents with this UI code:</p>
+<pre><code language="language-typescript" class="language-typescript">import { Component } from &#39;@angular/core&#39;;
+import { CommonModule } from &#39;@angular/common&#39;;
+import { Router } from &#39;@angular/router&#39;;
+
+@Component({
+  selector: &#39;app-landing&#39;,
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    &lt;div class=&#34;page&#34;&gt;
+      &lt;h1 class=&#34;title&#34;&gt;A very important app.&lt;/h1&gt;
+      &lt;button class=&#34;cta&#34; (click)=&#34;proceedToChat()&#34;&gt;Proceed to chat&lt;/button&gt;
+    &lt;/div&gt;
+  `,
+  styles: [`
+    .page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #0b1020; color: #eaf0ff; }
+    .title { font-size: 40px; margin: 0; }
+    .cta { margin-top: 10px; border: 0; padding: 12px 18px; border-radius: 10px; background: #6d5efc; color: white; cursor: pointer; }
+  `],
+})
+export class LandingComponent {
+  constructor(private router: Router) {}
+  proceedToChat() { this.router.navigate([&#39;/chat&#39;]); }
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 4.6: Implement the Chat Interface" duration="10">
+        <p>Open <code>web/src/app/chat/chat.component.ts</code>. Paste the core chat logic:</p>
+<pre><code language="language-typescript" class="language-typescript">import { Component, OnInit } from &#39;@angular/core&#39;;
+import { CommonModule } from &#39;@angular/common&#39;;
+import { FormsModule } from &#39;@angular/forms&#39;;
+import { RagService } from &#39;../services/rag.service&#39;;
+
+type ChatMessage = { role: &#39;user&#39; | &#39;assistant&#39;; content: string };
+
+@Component({
+  selector: &#39;app-chat&#39;,
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  template: `
+    &lt;div class=&#34;wrap&#34;&gt;
+      &lt;div class=&#34;topbar&#34;&gt;
+        &lt;h2 class=&#34;title&#34;&gt;Chat with your document&lt;/h2&gt;
+        &lt;div class=&#34;status&#34;&gt;&#123;&#123; indexStatus === &#39;ready&#39; ? &#39;Ready&#39; : &#39;Building...&#39; }}&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;chat&#34;&gt;
+        &lt;div *ngFor=&#34;let m of messages&#34; class=&#34;msg&#34; [class.user]=&#34;m.role === &#39;user&#39;&#34;&gt;
+          &lt;b&gt;&#123;&#123; m.role === &#39;user&#39; ? &#39;You&#39; : &#39;Assistant&#39; }}&lt;/b&gt;: &#123;&#123; m.content }}
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;composer&#34;&gt;
+        &lt;input [(ngModel)]=&#34;draft&#34; (keyup.enter)=&#34;send()&#34; placeholder=&#34;Ask something...&#34;&gt;
+        &lt;button (click)=&#34;send()&#34; [disabled]=&#34;isSending&#34;&gt;Send&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  `,
+  styles: [`
+    .wrap { min-height: 100vh; background: #0b1020; color: #eaf0ff; display: flex; flex-direction: column; }
+    .topbar { padding: 18px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .chat { flex: 1; padding: 18px; overflow-y: auto; }
+    .msg { margin-bottom: 12px; }
+    .composer { padding: 18px; display: flex; gap: 8px; }
+    input { flex: 1; border-radius: 8px; padding: 8px; }
+  `]
+})
+export class ChatComponent implements OnInit {
+  messages: ChatMessage[] = [];
+  draft = &#39;&#39;;
+  indexStatus = &#39;building&#39;;
+  isSending = false;
+
+  constructor(private rag: RagService) {}
+
+  ngOnInit() { this.pollIndex(); }
+
+  async pollIndex() {
+    for(let i=0; i&lt;30; i++) {
+      const res = await this.rag.ensureIndex();
+      if(res.status === &#39;ready&#39;) { this.indexStatus = &#39;ready&#39;; return; }
+      await new Promise(r =&gt; setTimeout(r, 2000));
+    }
+  }
+
+  async send() {
+    if(!this.draft.trim()) return;
+    const m = this.draft; this.draft = &#39;&#39;;
+    this.messages.push({ role: &#39;user&#39;, content: m });
+    this.isSending = true;
+    const res = await this.rag.chat(m, 6);
+    this.messages.push({ role: &#39;assistant&#39;, content: res.answer });
+    this.isSending = false;
+  }
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 5: Secure Your Gemini Key" duration="3">
+        <p>Set your API key securely:</p>
+<pre><code language="language-bash" class="language-bash">firebase functions:secrets:set GEMINI_API_KEY
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 5.5: Implement the RAG Logic" duration="15">
+        <p>Open <code>functions/src/index.ts</code>. Replace everything with the full RAG pipeline:</p>
+<pre><code language="language-typescript" class="language-typescript">import * as admin from &#39;firebase-admin&#39;;
+import * as functions from &#39;firebase-functions&#39;;
+import { GoogleGenerativeAI } from &#39;@google/generative-ai&#39;;
+import { PDFParse } from &#39;pdf-parse&#39;;
+import crypto from &#39;crypto&#39;;
+import fs from &#39;fs/promises&#39;;
+import path from &#39;path&#39;;
+
+admin.initializeApp();
+const db = admin.firestore();
+
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const EMBEDDING_MODELS = [&#39;gemini-embedding-001&#39;];
+const CHAT_MODEL = &#39;gemini-1.5-flash&#39;;
+const STORY_PDF_PATH = path.resolve(__dirname, &#39;..&#39;, &#39;assets&#39;, &#39;story.pdf&#39;);
+
+function sha256Hex(buffer: Buffer): string {
+  return crypto.createHash(&#39;sha256&#39;).update(buffer).digest(&#39;hex&#39;);
+}
+
+function chunkText(text: string, chunkSize = 1200, overlap = 200): string[] {
+  const cleaned = text.replace(/\s+/g, &#39; &#39;).trim();
+  if (!cleaned) return [];
+  const chunks: string[] = [];
+  let i = 0;
+  while (i &lt; cleaned.length) {
+    const end = Math.min(i + chunkSize, cleaned.length);
+    const chunk = cleaned.slice(i, end).trim();
+    if (chunk) chunks.push(chunk);
+    if (end === cleaned.length) break;
+    i = Math.max(0, end - overlap);
+  }
+  return chunks;
+}
+
+function cosineSimilarity(a: number[], b: number[]): number {
+  let dot = 0, na = 0, nb = 0;
+  for (let i = 0; i &lt; a.length; i++) {
+    dot += a[i] * b[i]; na += a[i] * a[i]; nb += b[i] * b[i];
+  }
+  return dot / (Math.sqrt(na) * Math.sqrt(nb));
+}
+
+export const ensureRagIndex = functions.https.onCall(async (req) =&gt; {
+  const { pdfSha256 } = await ensureStoryPdfPresent();
+  const indexRef = db.collection(&#39;rag_index&#39;).doc(&#39;default&#39;);
+  await indexRef.set({ status: &#39;building&#39;, pdfSha256, updatedAt: new Date() });
+  try {
+    const data = await fs.readFile(STORY_PDF_PATH);
+    const pdfParser = new PDFParse(data);
+    const textResult = await pdfParser.getText();
+    const chunks = chunkText(textResult.text);
+    const genAI = new GoogleGenerativeAI(GEMINI_API_KEY || &#39;&#39;);
+    const model = genAI.getGenerativeModel({ model: EMBEDDING_MODELS[0] });
+
+    for (let i = 0; i &lt; chunks.length; i++) {
+      const res = await model.embedContent(chunks[i]);
+      await db.collection(&#39;rag_chunks&#39;).add({
+        pdfSha256, text: chunks[i], embedding: res.embedding.values, updatedAt: new Date()
+      });
+    }
+    await indexRef.update({ status: &#39;ready&#39; });
+    return { status: &#39;ready&#39; };
+  } catch (err: any) {
+    await indexRef.update({ status: &#39;error&#39;, error: err.message });
+    throw err;
+  }
+});
+
+export const chatWithRag = functions.https.onCall(async (req) =&gt; {
+  const userMessage = req.data.message;
+  const genAI = new GoogleGenerativeAI(GEMINI_API_KEY || &#39;&#39;);
+  const chatModel = genAI.getGenerativeModel({ model: CHAT_MODEL });
+  const embedModel = genAI.getGenerativeModel({ model: EMBEDDING_MODELS[0] });
+
+  const queryRes = await embedModel.embedContent(userMessage);
+  const queryEmbed = queryRes.embedding.values;
+
+  const chunksSnap = await db.collection(&#39;rag_chunks&#39;).get();
+  const scored = chunksSnap.docs.map(d =&gt; ({
+    text: d.data().text,
+    score: cosineSimilarity(queryEmbed, d.data().embedding)
+  })).sort((a,b) =&gt; b.score - a.score).slice(0, 5);
+
+  const context = scored.map(s =&gt; s.text).join(&#39;\n---\n&#39;);
+  const prompt = `Answer based on this story excerpt: ${context}\n\nQuestion: ${userMessage}`;
+  const result = await chatModel.generateContent(prompt);
+  return { answer: result.response.text() };
+});
+
+async function ensureStoryPdfPresent() {
+  const data = await fs.readFile(STORY_PDF_PATH);
+  return { pdfSha256: sha256Hex(data as unknown as Buffer) };
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 6: Build and Deploy" duration="5">
+        <p>Run:</p>
+<pre><code language="language-bash" class="language-bash">firebase deploy
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 7: Access &amp; Test" duration="3">
+        <ol type="1">
+<li>Open the <strong>Hosting URL</strong>.</li>
+<li>Start chatting with your AI!</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

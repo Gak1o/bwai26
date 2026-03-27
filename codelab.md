@@ -1,172 +1,320 @@
-# Story RAG Chat (Angular + Firebase + Gemini) - Deploy-first Codelab
+# Story Angular RAG Chat on Firebase
+summary: Deploy a simple Angular + Firebase + Gemini RAG app that answers questions from a story PDF.
+id: story-rag-chat-firebase
+categories: firebase,angular,ai,web
+tags: beginner,deploy-first,code-along
+status: Published
+authors: ANTO
+feedback link: https://github.com/gak1o/bwai26/issues
 
-## Overview
-Build a very small web app that:
-1. Shows an intro page with a **Proceed to chat** button
-2. Uses a PDF (`story.pdf`) as the knowledge source
-3. Uses **Gemini embeddings** to index the PDF (RAG)
-4. Answers user questions by retrieving the most relevant PDF excerpts
+## Introduction
+Duration: 1
 
-This repository contains:
-- `web/` (Angular UI)
-- `functions/` (Firebase Functions backend with RAG logic)
+Welcome! By the end of this lab, you will have a deployed **Angular RAG Chatbot** that acts as an expert on your provided PDF document.
 
-## Time
-~25-45 minutes
+### What you will learn:
+- Cloning a repository in Cloud Shell.
+- Configuring a Firebase project for Web and Functions.
+- Securely storing a Gemini API key using Google Cloud Secret Manager.
+- Deploying a full-stack AI app.
 
-## What you will learn
-- How to wire an Angular frontend to Firebase callable Functions
-- How to ingest a PDF into Firestore embeddings
-- How to do retrieval (cosine similarity) and prompt Gemini for an answer
+### Prerequisites:
+- A Google Cloud Planning project with **Billing** and **Firebase** enabled.
+- A **Gemini API Key** from [Google AI Studio](https://aistudio.google.com/app/apikey).
 
-## Prerequisites
-- Node.js installed (Node 18+; this project works with Node 22+)
-- Firebase CLI installed: `npm i -g firebase-tools`
-- Logged in to Firebase: `firebase login`
-- A Gemini API key (from Google AI Studio / Gemini API)
+---
 
-## Lesson 1: Create / configure Firebase project (deploy target)
-1. Open the Firebase Console and create a project (or select an existing one).
-2. Enable **Firestore**:
-   - Firebase Console -> Firestore Database -> **Create database**
-3. Add a **Web App** (to get the client config):
-   - Project Settings -> General -> Your apps -> **Add app** -> Web app
-   - Copy the Firebase config object.
+## Step 1: Open Cloud Shell & Clone
+Duration: 3
 
-## Lesson 2: Link this folder to your Firebase project
-From the repo root:
-```sh
-firebase login
+1. Go to [Google Cloud Console](https://console.cloud.google.com/).
+2. Click the **Activate Cloud Shell** button (top right).
+3. Clone the repo and enter the project folder:
+
+```bash
+git clone https://github.com/gak1o/bwai26.git
+cd bwai26
+```
+
+---
+
+## Step 2: Login & Select Project
+Duration: 3
+
+1. Authenticate with Firebase:
+```bash
+firebase login --no-localhost
+```
+
+2. Link your Firebase project:
+```bash
 firebase use --add
 ```
-Pick your Firebase project and set it as the default.
+Select the project you created for this codelab.
 
-This creates/updates `.firebaserc` and ensures `firebase deploy` targets the right project.
+---
 
-## Lesson 3: Put the PDF into the backend
-Your content source is bundled by filename.
+## Step 3: Add Your PDF
+Duration: 2
 
-1. Copy/rename your story PDF to:
-   - `functions/assets/story.pdf`
+The AI needs a source. Rename your choice of story PDF to **`story.pdf`** and place it here:
 
-On first chat, the backend reads that PDF and builds embeddings automatically.
+`functions/assets/story.pdf`
 
-## Lesson 4: Configure Gemini API key for the backend (deploy-safe)
-The backend needs `GEMINI_API_KEY` at runtime to call Gemini for:
-- embeddings (`embedContent`)
-- chat (`generateContent`)
+---
 
-Recommended: set it as a **Firebase Functions secret** (do not commit keys).
+## Step 4: Configure Frontend
+Duration: 5
 
-Using Firebase CLI (recommended):
-```sh
+Open `web/src/app/firebaseConfig.ts` and paste your project config:
+
+```typescript
+export const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  appId: "YOUR_APP_ID"
+};
+```
+
+---
+
+## Step 4.5: Implement the Landing Page
+Duration: 5
+
+Open `web/src/app/landing/landing.component.ts`. Replace its contents with this UI code:
+
+```typescript
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-landing',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <div class="page">
+      <h1 class="title">A very important app.</h1>
+      <button class="cta" (click)="proceedToChat()">Proceed to chat</button>
+    </div>
+  `,
+  styles: [`
+    .page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #0b1020; color: #eaf0ff; }
+    .title { font-size: 40px; margin: 0; }
+    .cta { margin-top: 10px; border: 0; padding: 12px 18px; border-radius: 10px; background: #6d5efc; color: white; cursor: pointer; }
+  `],
+})
+export class LandingComponent {
+  constructor(private router: Router) {}
+  proceedToChat() { this.router.navigate(['/chat']); }
+}
+```
+
+---
+
+## Step 4.6: Implement the Chat Interface
+Duration: 10
+
+Open `web/src/app/chat/chat.component.ts`. Paste the core chat logic:
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RagService } from '../services/rag.service';
+
+type ChatMessage = { role: 'user' | 'assistant'; content: string };
+
+@Component({
+  selector: 'app-chat',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  template: `
+    <div class="wrap">
+      <div class="topbar">
+        <h2 class="title">Chat with your document</h2>
+        <div class="status">{{ indexStatus === 'ready' ? 'Ready' : 'Building...' }}</div>
+      </div>
+      <div class="chat">
+        <div *ngFor="let m of messages" class="msg" [class.user]="m.role === 'user'">
+          <b>{{ m.role === 'user' ? 'You' : 'Assistant' }}</b>: {{ m.content }}
+        </div>
+      </div>
+      <div class="composer">
+        <input [(ngModel)]="draft" (keyup.enter)="send()" placeholder="Ask something...">
+        <button (click)="send()" [disabled]="isSending">Send</button>
+      </div>
+    </div>
+  `,
+  styles: [`
+    .wrap { min-height: 100vh; background: #0b1020; color: #eaf0ff; display: flex; flex-direction: column; }
+    .topbar { padding: 18px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .chat { flex: 1; padding: 18px; overflow-y: auto; }
+    .msg { margin-bottom: 12px; }
+    .composer { padding: 18px; display: flex; gap: 8px; }
+    input { flex: 1; border-radius: 8px; padding: 8px; }
+  `]
+})
+export class ChatComponent implements OnInit {
+  messages: ChatMessage[] = [];
+  draft = '';
+  indexStatus = 'building';
+  isSending = false;
+
+  constructor(private rag: RagService) {}
+
+  ngOnInit() { this.pollIndex(); }
+
+  async pollIndex() {
+    for(let i=0; i<30; i++) {
+      const res = await this.rag.ensureIndex();
+      if(res.status === 'ready') { this.indexStatus = 'ready'; return; }
+      await new Promise(r => setTimeout(r, 2000));
+    }
+  }
+
+  async send() {
+    if(!this.draft.trim()) return;
+    const m = this.draft; this.draft = '';
+    this.messages.push({ role: 'user', content: m });
+    this.isSending = true;
+    const res = await this.rag.chat(m, 6);
+    this.messages.push({ role: 'assistant', content: res.answer });
+    this.isSending = false;
+  }
+}
+```
+
+---
+
+## Step 5: Secure Your Gemini Key
+Duration: 3
+
+Set your API key securely:
+
+```bash
 firebase functions:secrets:set GEMINI_API_KEY
 ```
-Paste your key when prompted.
 
-Then update your deployed function(s) to access the secret (if prompted by Firebase tooling during deploy).
+---
 
-Quick dev-only alternative (NOT recommended for public repos):
-- Open `functions/src/index.ts`
-- Replace `PASTE_YOUR_GEMINI_API_KEY_HERE`
+## Step 5.5: Implement the RAG Logic
+Duration: 15
 
-Then build:
-```sh
-npm run build
+Open `functions/src/index.ts`. Replace everything with the full RAG pipeline:
+
+```typescript
+import * as admin from 'firebase-admin';
+import * as functions from 'firebase-functions';
+import { GoogleGenerativeAI } from '@google/generative-ai';
+import { PDFParse } from 'pdf-parse';
+import crypto from 'crypto';
+import fs from 'fs/promises';
+import path from 'path';
+
+admin.initializeApp();
+const db = admin.firestore();
+
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const EMBEDDING_MODELS = ['gemini-embedding-001'];
+const CHAT_MODEL = 'gemini-1.5-flash';
+const STORY_PDF_PATH = path.resolve(__dirname, '..', 'assets', 'story.pdf');
+
+function sha256Hex(buffer: Buffer): string {
+  return crypto.createHash('sha256').update(buffer).digest('hex');
+}
+
+function chunkText(text: string, chunkSize = 1200, overlap = 200): string[] {
+  const cleaned = text.replace(/\s+/g, ' ').trim();
+  if (!cleaned) return [];
+  const chunks: string[] = [];
+  let i = 0;
+  while (i < cleaned.length) {
+    const end = Math.min(i + chunkSize, cleaned.length);
+    const chunk = cleaned.slice(i, end).trim();
+    if (chunk) chunks.push(chunk);
+    if (end === cleaned.length) break;
+    i = Math.max(0, end - overlap);
+  }
+  return chunks;
+}
+
+function cosineSimilarity(a: number[], b: number[]): number {
+  let dot = 0, na = 0, nb = 0;
+  for (let i = 0; i < a.length; i++) {
+    dot += a[i] * b[i]; na += a[i] * a[i]; nb += b[i] * b[i];
+  }
+  return dot / (Math.sqrt(na) * Math.sqrt(nb));
+}
+
+export const ensureRagIndex = functions.https.onCall(async (req) => {
+  const { pdfSha256 } = await ensureStoryPdfPresent();
+  const indexRef = db.collection('rag_index').doc('default');
+  await indexRef.set({ status: 'building', pdfSha256, updatedAt: new Date() });
+  try {
+    const data = await fs.readFile(STORY_PDF_PATH);
+    const pdfParser = new PDFParse(data);
+    const textResult = await pdfParser.getText();
+    const chunks = chunkText(textResult.text);
+    const genAI = new GoogleGenerativeAI(GEMINI_API_KEY || '');
+    const model = genAI.getGenerativeModel({ model: EMBEDDING_MODELS[0] });
+
+    for (let i = 0; i < chunks.length; i++) {
+      const res = await model.embedContent(chunks[i]);
+      await db.collection('rag_chunks').add({
+        pdfSha256, text: chunks[i], embedding: res.embedding.values, updatedAt: new Date()
+      });
+    }
+    await indexRef.update({ status: 'ready' });
+    return { status: 'ready' };
+  } catch (err: any) {
+    await indexRef.update({ status: 'error', error: err.message });
+    throw err;
+  }
+});
+
+export const chatWithRag = functions.https.onCall(async (req) => {
+  const userMessage = req.data.message;
+  const genAI = new GoogleGenerativeAI(GEMINI_API_KEY || '');
+  const chatModel = genAI.getGenerativeModel({ model: CHAT_MODEL });
+  const embedModel = genAI.getGenerativeModel({ model: EMBEDDING_MODELS[0] });
+
+  const queryRes = await embedModel.embedContent(userMessage);
+  const queryEmbed = queryRes.embedding.values;
+
+  const chunksSnap = await db.collection('rag_chunks').get();
+  const scored = chunksSnap.docs.map(d => ({
+    text: d.data().text,
+    score: cosineSimilarity(queryEmbed, d.data().embedding)
+  })).sort((a,b) => b.score - a.score).slice(0, 5);
+
+  const context = scored.map(s => s.text).join('\n---\n');
+  const prompt = `Answer based on this story excerpt: ${context}\n\nQuestion: ${userMessage}`;
+  const result = await chatModel.generateContent(prompt);
+  return { answer: result.response.text() };
+});
+
+async function ensureStoryPdfPresent() {
+  const data = await fs.readFile(STORY_PDF_PATH);
+  return { pdfSha256: sha256Hex(data as unknown as Buffer) };
+}
 ```
-(run from the `functions/` folder)
 
-## Lesson 5: Configure the Angular Firebase client
-1. Open:
-   - `web/src/app/firebaseConfig.ts`
-2. Replace the placeholder values with the Firebase config values from Lesson 1.
+---
 
-Then build:
-```sh
-npm run build
-```
-(run from the `web/` folder)
+## Step 6: Build and Deploy
+Duration: 5
 
-## Lesson 6: Deploy
-From repo root:
-```sh
+Run:
+```bash
 firebase deploy
 ```
 
-After deploy finishes:
-- Hosting prints a URL (your live web app)
-- Functions deploy the callable endpoints:
-  - `ensureRagIndex`
-  - `chatWithRag`
+---
 
-## Lesson 7: Verify the deployed app
-1. Open the Hosting URL.
-2. Click **Proceed to chat**.
-3. The first load may take time while `ensureRagIndex` ingests `story.pdf`.
-4. Ask a question about the story and confirm you get a grounded answer.
+## Step 7: Access & Test
+Duration: 3
 
-## Under the hood (brief)
-### 1) PDF -> chunks
-- The backend parses `functions/assets/story.pdf` with `pdf-parse`
-- It converts the extracted text into overlapping chunks
-
-### 2) Chunks -> embeddings
-- For each chunk, it calls Gemini embedding model(s):
-  - `gemini-embedding-001`
-  - `gemini-embedding-2-preview`
-- Embeddings are stored in Firestore:
-  - `rag_chunks` collection
-  - `rag_index/default` holds status and metadata
-
-### 3) Retrieval -> relevant excerpts
-- When you ask a question:
-  - it embeds the question
-  - loads candidate chunks for the same `pdfSha256`
-  - computes cosine similarity
-  - picks top `topK` excerpts
-
-### 4) Gemini -> final answer
-- It sends a prompt to Gemini chat model (defaults to `gemini-2.5-flash`)
-- Prompt instructs the model to answer using ONLY the excerpts
-
-## Troubleshooting
-### “Backend error INTERNAL” in the deployed UI
-Common causes:
-- Missing/incorrect `GEMINI_API_KEY` in deployed Functions
-- Firestore not enabled in the Firebase project
-- The PDF is missing at `functions/assets/story.pdf` in the deployed build
-
-### Embedding model 404 (embedContent not supported)
-If embeddings fail with `... embedding model ... not found ...`, your Gemini API key may not support the default model.
-To fix:
-- Set `GEMINI_EMBED_MODEL` in the Functions environment or update the model list in `functions/src/index.ts`.
-
-## Appendix A: Run locally with emulators (optional)
-If you want a local test loop:
-```sh
-firebase emulators:start
-```
-Then open:
-- `http://127.0.0.1:5000`
-
-Optional smoke test:
-```sh
-node web/scripts/smoke-rag.js
-```
-
-## Where to look in the code
-- Backend (RAG + Gemini):
-  - `functions/src/index.ts`
-- Frontend (UI + calling Functions):
-  - `web/src/app/landing/landing.component.ts`
-  - `web/src/app/chat/chat.component.ts`
-  - `web/src/app/services/rag.service.ts`
-- PDF content source:
-  - `functions/assets/story.pdf`
-
-## End
-You should now have:
-- A working intro + chat UI
-- A working RAG backend that turns your PDF into embeddings
-- Gemini answering grounded in your PDF excerpts
-
+1. Open the **Hosting URL**.
+2. Start chatting with your AI!

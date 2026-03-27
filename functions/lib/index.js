@@ -51,18 +51,12 @@ const db = admin.firestore();
 const RAG_INDEX_DOC_ID = 'default';
 const RAG_INDEX_COLLECTION = 'rag_index';
 const RAG_CHUNKS_COLLECTION = 'rag_chunks';
-// Gemini API key.
-// Recommended: set via Firebase Functions env/Secrets.
-// For quick testing you can paste the key here.
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY ?? 'gemini-api-key-here';
-// Embedding model candidates; override with `GEMINI_EMBED_MODEL` (comma-separated).
-// We also try Gemini API `v1` for embeddings because some models don't support `v1beta`.
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY ?? 'put-your-gemini-api-key-here';
 const EMBEDDING_MODELS = (process.env.GEMINI_EMBED_MODEL ?? 'gemini-embedding-001,gemini-embedding-2-preview')
     .split(',')
     .map((s) => s.trim())
     .filter(Boolean);
 const CHAT_MODEL = process.env.GEMINI_CHAT_MODEL ?? 'gemini-2.5-flash';
-// Compiled code lives in `lib/`, so `..` points back to `functions/`.
 const STORY_PDF_PATH = path_1.default.resolve(__dirname, '..', 'assets', 'story.pdf');
 function requireGeminiKey() {
     if (!GEMINI_API_KEY || GEMINI_API_KEY === 'PASTE_YOUR_GEMINI_API_KEY_HERE') {
@@ -120,7 +114,6 @@ async function embedText(genAI, text) {
         for (const apiVersion of apiVersions) {
             try {
                 const embeddingModel = genAI.getGenerativeModel({ model: modelName });
-                // `apiVersion` affects which embedding models/methods are available.
                 const embedResult = await embeddingModel.embedContent(text, { apiVersion });
                 const embedding = extractEmbeddingValues(embedResult);
                 if (embedding.length)
@@ -165,12 +158,9 @@ async function buildRagIndex(pdfBuffer, pdfSha256) {
             chunkIndex,
             text,
             embedding,
-            // `FieldValue.serverTimestamp()` isn't available in some emulator/Admin SDK combinations.
-            // Using a concrete timestamp keeps ingestion working everywhere.
             updatedAt: new Date(),
         }, { merge: false }));
     }
-    // Firestore writes can be heavy; we still cap concurrency per run by awaiting at the end.
     await Promise.all(indexWritePromises);
     return chunksToEmbed.length;
 }
@@ -194,10 +184,7 @@ exports.ensureRagIndex = functions.https.onCall(async () => {
         error: null,
     }, { merge: true });
     try {
-        const chunkCount = await buildRagIndex(
-        // Re-read to keep the ingestion simple and avoid persisting large buffers in memory longer than needed.
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        (await promises_1.default.readFile(STORY_PDF_PATH)), pdfSha256);
+        const chunkCount = await buildRagIndex((await promises_1.default.readFile(STORY_PDF_PATH)), pdfSha256);
         await indexRef.set({
             status: 'ready',
             chunkCount,

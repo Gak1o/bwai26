@@ -1,0 +1,30 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2026-03-27T04:19:00+03:00",
+  "id": "story-rag-chat-firebase",
+  "duration": 55,
+  "title": "Story Angular RAG Chat on Firebase",
+  "authors": "ANTO",
+  "summary": "Deploy a simple Angular + Firebase + Gemini RAG app that answers questions from a story PDF.",
+  "source": "codelab.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "firebase",
+    "angular",
+    "ai",
+    "web"
+  ],
+  "tags": [
+    "beginner",
+    "code-along",
+    "deploy-first"
+  ],
+  "feedback": "https://github.com/gak1o/bwai26/issues",
+  "url": "story-rag-chat-firebase"
+}
